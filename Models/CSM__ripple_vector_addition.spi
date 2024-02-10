@@ -1,0 +1,78 @@
+.SUBCKT CSM__ripple_vector_addition Cin0 Cin1 Cin2 Cin3 Cin4 Cin5 Cin6 Cin7 Cov gnd S0 S1 S2 S3 S4 S5 S6 vdd Z10 Z11 Z12 Z13 Z14 Z15 Z8 Z9
+
+XFA@6 S0 Cin0 gnd gnd net@193 net@114 vdd CSM__FA
+XFA@7 net@237 net@227 net@193 gnd net@262 Z9 vdd CSM__FA
+XFA@8 S2 Cin2 net@262#2contact@155_metal-4-metal-5 gnd net@279 net@206 vdd CSM__FA
+XFA@9 net@315 net@305 net@279 gnd net@340 Z11 vdd CSM__FA
+XFA@10 S4 Cin4 net@340#2contact@205_metal-4-metal-5 gnd net@357 net@284 vdd CSM__FA
+XFA@11 net@392 net@382 net@357 gnd net@417 Z13 vdd CSM__FA
+XFA@12 S6 Cin6 net@417#2contact@255_metal-4-metal-5 gnd net@434 net@361 vdd CSM__FA
+XFA@13 gnd net@467 net@434 gnd Cov Z15 vdd CSM__FA
+
+Xinv_lay@9 gnd net@114 Z8 vdd CSM__inv_lay
+Xinv_lay@10 gnd Cin1 net@227 vdd CSM__inv_lay
+Xinv_lay@11 gnd S1 net@237 vdd CSM__inv_lay
+Xinv_lay@12 gnd net@206 Z10 vdd CSM__inv_lay
+Xinv_lay@13 gnd Cin3 net@305 vdd CSM__inv_lay
+Xinv_lay@14 gnd S3 net@315 vdd CSM__inv_lay
+Xinv_lay@15 gnd net@284 Z12 vdd CSM__inv_lay
+Xinv_lay@16 gnd Cin5 net@382 vdd CSM__inv_lay
+Xinv_lay@17 gnd S5 net@392 vdd CSM__inv_lay
+Xinv_lay@18 gnd net@361 Z14 vdd CSM__inv_lay
+Xinv_lay@19 gnd Cin7 net@467 vdd CSM__inv_lay
+
+** Extracted Parasitic Capacitors ***
+C0 S0 0 0.142fF
+C1 Cin0 0 0.399fF
+C2 net@193 0 0.749fF
+C3 net@114 0 0.028fF
+C4 net@237 0 0.061fF
+C5 net@227 0 0.015fF
+C6 net@262 0 0.413fF
+C7 Z9 0 0.099fF
+C8 S2 0 0.168fF
+C9 Cin2 0 0.375fF
+C10 net@262#2contact@155_metal-4-metal-5 0 0.468fF
+C11 net@279 0 0.749fF
+C12 net@206 0 0.028fF
+C13 net@315 0 0.061fF
+C14 net@305 0 0.015fF
+C15 net@340 0 0.413fF
+C16 Z11 0 0.099fF
+C17 S4 0 0.192fF
+C18 Cin4 0 0.35fF
+C19 net@340#2contact@205_metal-4-metal-5 0 0.468fF
+C20 net@357 0 0.749fF
+C21 net@284 0 0.028fF
+C22 net@392 0 0.061fF
+C23 net@382 0 0.015fF
+C24 net@417 0 0.413fF
+C25 Z13 0 0.099fF
+C26 S6 0 0.217fF
+C27 Cin6 0 0.326fF
+C28 net@417#2contact@255_metal-4-metal-5 0 0.468fF
+C29 net@434 0 0.749fF
+C30 net@361 0 0.028fF
+C31 net@467 0 0.015fF
+C32 Cov 0 0.099fF
+C33 Z15 0 0.099fF
+C34 Z8 0 0.041fF
+C35 Z10 0 0.041fF
+C36 Cin1 0 0.364fF
+C37 S1 0 0.217fF
+C38 Z12 0 0.041fF
+C39 Cin3 0 0.34fF
+C40 S3 0 0.25fF
+C41 Z14 0 0.041fF
+C42 Cin5 0 0.314fF
+C43 S5 0 0.277fF
+C44 Cin7 0 0.289fF
+
+** Extracted Parasitic Resistors ***
+R0 net@262#2contact@155_metal-4-metal-5 net@262 9.828
+R1 net@340#2contact@205_metal-4-metal-5 net@340 9.828
+R2 net@417#2contact@255_metal-4-metal-5 net@417 9.828
+
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+
+.ENDS CSM__ripple_vector_addition

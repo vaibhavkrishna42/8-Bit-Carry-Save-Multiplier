@@ -1,0 +1,106 @@
+.SUBCKT CSM__OddRow A0 A1 A2 A3 A4 A5 A6 A7 Bx Cin0 Cin1 Cin2 Cin3 Cin4 Cin5 Cin6 Cin7 Co0 Co1 Co2 Co3 Co4 Co5 Co6 Co7 gnd S0 S1 S2 S3 S4 S5 S6 Sin0 Sin1 Sin2 Sin3 Sin4 Sin5 Sin6 vdd Zx
+
+XAND2@1 A6 Bx#1contact@374_metal-3-metal-4 gnd vdd net@863 CSM__AND2
+XAND2@2 A5 Bx#9contact@390_metal-3-metal-4 gnd vdd net@896 CSM__AND2
+XAND2@3 A4 Bx#13contact@396_metal-3-metal-4 gnd vdd net@912 CSM__AND2
+XAND2@4 A3 Bx#17contact@415_metal-3-metal-4 gnd vdd net@919 CSM__AND2
+XAND2@5 A2 Bx#21contact@418_metal-3-metal-4 gnd vdd net@937 CSM__AND2
+XAND2@6 A1 Bx#25contact@421_metal-3-metal-4 gnd vdd net@944 CSM__AND2
+XAND2@7 A0 Bx#0pin@85_metal-4 gnd vdd net@952 CSM__AND2
+
+XFA@1 net@850 Cin7 vdd gnd Co7 S6 vdd CSM__FA
+XFA@2 net@863 Cin6 Sin6 gnd Co6 S5 vdd CSM__FA
+XFA@4 net@896 Cin5 Sin5 gnd Co5 S4 vdd CSM__FA
+XFA@6 net@912 Cin4 Sin4 gnd Co4 S3 vdd CSM__FA
+XFA@8 net@919 Cin3 Sin3 gnd Co3 S2 vdd CSM__FA
+XFA@10 net@937 Cin2 Sin2 gnd Co2 S1 vdd CSM__FA
+XFA@12 net@944 Cin1 Sin1 gnd Co1 S0 vdd CSM__FA
+XFA@14 net@952 Cin0 Sin0 gnd Co0 Zx vdd CSM__FA
+
+XNAND2@0 A7 Bx gnd vdd net@850 CSM__NAND2
+
+** Extracted Parasitic Capacitors ***
+C0 A6 0 0.149fF
+C1 Bx#1contact@374_metal-3-metal-4 0 0.79fF
+C2 A5 0 0.148fF
+C3 Bx#9contact@390_metal-3-metal-4 0 0.323fF
+C4 A4 0 0.151fF
+C5 Bx#13contact@396_metal-3-metal-4 0 0.48fF
+C6 A3 0 0.15fF
+C7 Bx#17contact@415_metal-3-metal-4 0 0.478fF
+C8 A2 0 0.15fF
+C9 Bx#21contact@418_metal-3-metal-4 0 0.596fF
+C10 A1 0 0.148fF
+C11 Bx#25contact@421_metal-3-metal-4 0 0.571fF
+C12 A0 0 0.148fF
+C13 Bx#0pin@85_metal-4 0 0.572fF
+C14 Cin7 0 0.379fF
+C15 Co7 0 0.061fF
+C16 S6 0 0.033fF
+C17 Cin6 0 0.379fF
+C18 Sin6 0 0.162fF
+C19 Co6 0 0.061fF
+C20 S5 0 0.033fF
+C21 Cin5 0 0.379fF
+C22 Sin5 0 0.162fF
+C23 Co5 0 0.061fF
+C24 S4 0 0.033fF
+C25 Cin4 0 0.379fF
+C26 Sin4 0 0.162fF
+C27 Co4 0 0.061fF
+C28 S3 0 0.033fF
+C29 Cin3 0 0.379fF
+C30 Sin3 0 0.162fF
+C31 Co3 0 0.061fF
+C32 S2 0 0.033fF
+C33 Cin2 0 0.379fF
+C34 Sin2 0 0.162fF
+C35 Co2 0 0.061fF
+C36 S1 0 0.033fF
+C37 Cin1 0 0.379fF
+C38 Sin1 0 0.162fF
+C39 Co1 0 0.061fF
+C40 S0 0 0.033fF
+C41 Cin0 0 0.379fF
+C42 Sin0 0 0.162fF
+C43 Co0 0 0.061fF
+C44 Zx 0 0.067fF
+C45 A7 0 0.135fF
+C46 Bx 0 2.718fF
+
+** Extracted Parasitic Resistors ***
+R0 Bx#0pin@85_metal-4 Bx#0pin@85_metal-4##0 8.44
+C47 Bx#0pin@85_metal-4##0 0 0.564fF
+R1 Bx#0pin@85_metal-4##0 Bx#0pin@85_metal-4##1 8.44
+C48 Bx#0pin@85_metal-4##1 0 0.564fF
+R2 Bx#0pin@85_metal-4##1 Bx#0pin@85_metal-4##2 8.44
+C49 Bx#0pin@85_metal-4##2 0 0.564fF
+R3 Bx#0pin@85_metal-4##2 Bx#1contact@374_metal-3-metal-4 8.44
+R4 Bx#1contact@374_metal-3-metal-4 Bx 5.395
+R5 Bx Bx##0 5.792
+C50 Bx##0 0 0.323fF
+R6 Bx##0 Bx#9contact@390_metal-3-metal-4 5.792
+R7 Bx Bx##0 8.612
+C51 Bx##0 0 0.48fF
+R8 Bx##0 Bx#13contact@396_metal-3-metal-4 8.612
+R9 Bx Bx##0 7.622
+C52 Bx##0 0 0.478fF
+R10 Bx##0 Bx##1 7.622
+C53 Bx##1 0 0.478fF
+R11 Bx##1 Bx#17contact@415_metal-3-metal-4 7.622
+R12 Bx Bx##0 9.503
+C54 Bx##0 0 0.596fF
+R13 Bx##0 Bx##1 9.503
+C55 Bx##1 0 0.596fF
+R14 Bx##1 Bx#21contact@418_metal-3-metal-4 9.503
+R15 Bx Bx##0 8.538
+C56 Bx##0 0 0.571fF
+R16 Bx##0 Bx##1 8.538
+C57 Bx##1 0 0.571fF
+R17 Bx##1 Bx##2 8.538
+C58 Bx##2 0 0.571fF
+R18 Bx##2 Bx#25contact@421_metal-3-metal-4 8.538
+
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+
+.ENDS CSM__OddRow

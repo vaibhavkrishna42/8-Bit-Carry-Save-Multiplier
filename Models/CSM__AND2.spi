@@ -1,0 +1,54 @@
+.SUBCKT CSM__AND2 A B gnd vdd Y
+
+Mnmos@3 net@108 B#2nmos@3_poly-right net@80 gnd nmos L=0.022U W=0.088U AS=0.004P AD=0.003P PS=0.202U PD=0.154U
+Mnmos@4 gnd A#3nmos@4_poly-right net@108 gnd nmos L=0.022U W=0.088U AS=0.003P AD=0.003P PS=0.154U PD=0.165U
+Mnmos@6 Y net@80#9nmos@6_poly-right gnd gnd nmos L=0.022U W=0.044U AS=0.003P AD=0.005P PS=0.165U PD=0.275U
+Mpmos@3 net@80 B#0pmos@3_poly-left vdd vdd pmos L=0.022U W=0.088U AS=0.004P AD=0.004P PS=0.209U PD=0.202U
+Mpmos@4 vdd A#0pmos@4_poly-left net@80 vdd pmos L=0.022U W=0.088U AS=0.004P AD=0.004P PS=0.202U PD=0.209U
+Mpmos@6 Y net@80#6pmos@6_poly-left vdd vdd pmos L=0.022U W=0.088U AS=0.004P AD=0.005P PS=0.209U PD=0.275U
+
+** Extracted Parasitic Capacitors ***
+C0 net@80 0 0.155fF
+C1 Y 0 0.127fF
+
+** Extracted Parasitic Resistors ***
+R0 A#2pin@38_polysilicon-1 A#0pmos@4_poly-left 7.75
+R1 B#0pmos@3_poly-left B#0pmos@3_poly-left##0 6.717
+R2 B#0pmos@3_poly-left##0 B#0pmos@3_poly-left##1 6.717
+R3 B#0pmos@3_poly-left##1 B#1pin@40_polysilicon-1 6.717
+R4 B#2nmos@3_poly-right B#2nmos@3_poly-right##0 6.717
+R5 B#2nmos@3_poly-right##0 B#2nmos@3_poly-right##1 6.717
+R6 B#2nmos@3_poly-right##1 B#3pin@48_polysilicon-1 6.717
+R7 B#3pin@48_polysilicon-1 B#3pin@48_polysilicon-1##0 9.3
+R8 B#3pin@48_polysilicon-1##0 B#3pin@48_polysilicon-1##1 9.3
+R9 B#3pin@48_polysilicon-1##1 B#3pin@48_polysilicon-1##2 9.3
+R10 B#3pin@48_polysilicon-1##2 B#3pin@48_polysilicon-1##3 9.3
+R11 B#3pin@48_polysilicon-1##3 B#3pin@48_polysilicon-1##4 9.3
+R12 B#3pin@48_polysilicon-1##4 B#1pin@40_polysilicon-1 9.3
+R13 B#3pin@48_polysilicon-1 B 9.3
+R14 A#2pin@38_polysilicon-1 A#2pin@38_polysilicon-1##0 9.817
+R15 A#2pin@38_polysilicon-1##0 A#2pin@38_polysilicon-1##1 9.817
+R16 A#2pin@38_polysilicon-1##1 A#2pin@38_polysilicon-1##2 9.817
+R17 A#2pin@38_polysilicon-1##2 A#2pin@38_polysilicon-1##3 9.817
+R18 A#2pin@38_polysilicon-1##3 A#2pin@38_polysilicon-1##4 9.817
+R19 A#2pin@38_polysilicon-1##4 A#2pin@38_polysilicon-1##5 9.817
+R20 A#2pin@38_polysilicon-1##5 A#2pin@38_polysilicon-1##6 9.817
+R21 A#2pin@38_polysilicon-1##6 A#2pin@38_polysilicon-1##7 9.817
+R22 A#2pin@38_polysilicon-1##7 A#3nmos@4_poly-right 9.817
+R23 A#2pin@38_polysilicon-1 A 7.75
+R24 net@80#6pmos@6_poly-left net@80#6pmos@6_poly-left##0 9.881
+R25 net@80#6pmos@6_poly-left##0 net@80#6pmos@6_poly-left##1 9.881
+R26 net@80#6pmos@6_poly-left##1 net@80#6pmos@6_poly-left##2 9.881
+R27 net@80#6pmos@6_poly-left##2 net@80#6pmos@6_poly-left##3 9.881
+R28 net@80#6pmos@6_poly-left##3 net@80#6pmos@6_poly-left##4 9.881
+R29 net@80#6pmos@6_poly-left##4 net@80#6pmos@6_poly-left##5 9.881
+R30 net@80#6pmos@6_poly-left##5 net@80#6pmos@6_poly-left##6 9.881
+R31 net@80#6pmos@6_poly-left##6 net@80#7pin@79_polysilicon-1 9.881
+R32 net@80#7pin@79_polysilicon-1 net@80 6.2
+R33 net@80#7pin@79_polysilicon-1 net@80#7pin@79_polysilicon-1##0 9.817
+R34 net@80#7pin@79_polysilicon-1##0 net@80#7pin@79_polysilicon-1##1 9.817
+R35 net@80#7pin@79_polysilicon-1##1 net@80#9nmos@6_poly-right 9.817
+
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+
+.ENDS CSM__AND2

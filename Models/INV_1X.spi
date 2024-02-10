@@ -1,0 +1,8 @@
+.SUBCKT EE5311--Digital-IC__INV_1X gnd IN OUT vdd
+Mnmos@0 OUT IN gnd gnd nmos L=0.022U W={X*0.044U}
+Mpmos@0 vdd IN OUT vdd pmos L=0.022U W={X*0.088U}
+
+* Spice Code nodes in cell cell 'INV_1X{sch}'
+.include "D:\Current\Digital\22nm_HP.pm"
+.param X = 3
+.ENDS EE5311--Digital-IC__INV_1X

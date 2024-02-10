@@ -1,0 +1,10 @@
+.SUBCKT EE5311--Digital-IC__NAND3 A B gnd vdd Y
+Mnmos@1 Y B net@1 gnd nmos L=0.022U W={X*0.088U}
+Mnmos@2 net@1 A gnd gnd nmos L=0.022U W={X*0.088U}
+Mpmos@0 vdd A Y vdd pmos L=0.022U W={X*0.088U}
+Mpmos@1 vdd B Y vdd pmos L=0.022U W={X*0.088U}
+
+* Spice Code nodes in cell cell 'NAND3{sch}'
+.include "D:\Current\Digital\Models\22nm_HP.pm"
+.param X = 3
+.ENDS EE5311--Digital-IC__NAND3

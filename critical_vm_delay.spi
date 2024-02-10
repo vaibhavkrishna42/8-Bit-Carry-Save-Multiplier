@@ -1,0 +1,111 @@
+*** SPICE deck for cell critical_vm{sch} from library CSM
+*** Created on Wed Nov 01, 2023 15:46:05
+*** Last revised on Sun Dec 10, 2023 15:50:31
+*** Written on Sun Dec 10, 2023 15:50:34 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.01FF
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+*** SUBCIRCUIT CSM__FA FROM CELL FA{sch}
+.SUBCKT CSM__FA A B Ci gnd nCo nSum vdd
+Mnmos@12 net@77 A gnd gnd nmos L=0.022U W=0.264U
+Mnmos@13 net@77 B gnd gnd nmos L=0.022U W=0.264U
+Mnmos@14 nCo Ci net@77 gnd nmos L=0.022U W=0.264U
+Mnmos@15 net@84 B nCo gnd nmos L=0.022U W=0.088U
+Mnmos@16 gnd A net@84 gnd nmos L=0.022U W=0.088U
+Mnmos@17 net@93 A gnd gnd nmos L=0.022U W=0.088U
+Mnmos@18 net@93 B gnd gnd nmos L=0.022U W=0.088U
+Mnmos@19 net@93 Ci gnd gnd nmos L=0.022U W=0.088U
+Mnmos@20 nSum nCo net@93 gnd nmos L=0.022U W=0.088U
+Mnmos@21 nSum Ci net@118 gnd nmos L=0.022U W=0.132U
+Mnmos@22 net@118 B net@119 gnd nmos L=0.022U W=0.132U
+Mnmos@23 net@119 A gnd gnd nmos L=0.022U W=0.132U
+Mpmos@12 net@78 Ci nCo vdd pmos L=0.022U W=0.528U
+Mpmos@13 vdd A net@78 vdd pmos L=0.022U W=0.528U
+Mpmos@14 vdd B net@78 vdd pmos L=0.022U W=0.528U
+Mpmos@15 net@82 A vdd vdd pmos L=0.022U W=0.176U
+Mpmos@16 nCo B net@82 vdd pmos L=0.022U W=0.176U
+Mpmos@17 vdd A net@102 vdd pmos L=0.022U W=0.176U
+Mpmos@18 vdd B net@102 vdd pmos L=0.022U W=0.176U
+Mpmos@19 vdd Ci net@102 vdd pmos L=0.022U W=0.176U
+Mpmos@20 net@102 nCo nSum vdd pmos L=0.022U W=0.176U
+Mpmos@21 vdd A net@115 vdd pmos L=0.022U W=0.264U
+Mpmos@22 net@115 B net@116 vdd pmos L=0.022U W=0.264U
+Mpmos@23 net@116 Ci nSum vdd pmos L=0.022U W=0.264U
+.ENDS CSM__FA
+
+*** SUBCIRCUIT CSM__NAND2 FROM CELL NAND2{sch}
+.SUBCKT CSM__NAND2 A B gnd vdd Y
+Mnmos@1 Y A net@1 gnd nmos L=0.022U W=0.088U
+Mnmos@2 net@1 B gnd gnd nmos L=0.022U W=0.088U
+Mpmos@0 vdd B Y vdd pmos L=0.022U W=0.088U
+Mpmos@1 vdd A Y vdd pmos L=0.022U W=0.088U
+
+* Spice Code nodes in cell cell 'NAND2{sch}'
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.ENDS CSM__NAND2
+
+*** SUBCIRCUIT CSM__inv FROM CELL inv{sch}
+.SUBCKT CSM__inv gnd inp out vdd
+Mnmos@0 out inp gnd gnd nmos L=0.022U W=0.044U
+Mpmos@0 vdd inp out vdd pmos L=0.022U W=0.088U
+
+* Spice Code nodes in cell cell 'inv{sch}'
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.ENDS CSM__inv
+
+*** SUBCIRCUIT CSM__mux FROM CELL mux{sch}
+.SUBCKT CSM__mux A B gnd S vdd Y
+Mnmos@0 Y net@17 B gnd nmos L=0.022U W=0.044U
+Mnmos@1 Y S A gnd nmos L=0.022U W=0.044U
+Mpmos@0 B S Y vdd pmos L=0.022U W=0.044U
+Mpmos@1 A net@17 Y vdd pmos L=0.022U W=0.044U
+Xinv@0 gnd S net@17 vdd CSM__inv
+
+* Spice Code nodes in cell cell 'mux{sch}'
+ .include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.ENDS CSM__mux
+
+*** SUBCIRCUIT critical_vm FROM CELL critical_vm{sch}
+.SUBCKT critical_vm a gnd vdd x y
+XFA3x@0 gnd gnd net@121 gnd net@35 net@0 vdd CSM__FA
+XFA3x@1 vdd gnd net@2 gnd net@31 net@4 vdd CSM__FA
+XFA3x@2 vdd gnd net@4 gnd net@29 net@6 vdd CSM__FA
+XFA3x@3 vdd gnd net@6 gnd net@27 net@8 vdd CSM__FA
+XFA3x@4 vdd gnd net@8 gnd net@25 net@10 vdd CSM__FA
+XFA3x@5 vdd gnd net@10 gnd net@22 net@12 vdd CSM__FA
+XFA3x@6 vdd gnd net@39 gnd net@42 FA3x@6_nSum vdd CSM__FA
+XFA3x@7 vdd gnd net@12 gnd net@39 FA3x@7_nSum vdd CSM__FA
+XFA3x@8 vdd gnd net@44 gnd net@126 FA3x@8_nSum vdd CSM__FA
+XFA3x@9 vdd gnd net@42 gnd net@44 FA3x@9_nSum vdd CSM__FA
+XFA3x@14 FA3x@14_A FA3x@14_B net@35 gnd FA3x@14_nCo FA3x@14_nSum vdd CSM__FA
+XFA3x@15 FA3x@15_A FA3x@15_B net@31 gnd FA3x@15_nCo FA3x@15_nSum vdd CSM__FA
+XFA3x@16 FA3x@16_A FA3x@16_B net@29 gnd FA3x@16_nCo FA3x@16_nSum vdd CSM__FA
+XFA3x@17 FA3x@17_A FA3x@17_B net@27 gnd FA3x@17_nCo FA3x@17_nSum vdd CSM__FA
+XFA3x@18 FA3x@18_A FA3x@18_B net@25 gnd FA3x@18_nCo FA3x@18_nSum vdd CSM__FA
+XFA3x@19 FA3x@19_A FA3x@19_B net@22 gnd FA3x@19_nCo FA3x@19_nSum vdd CSM__FA
+XM1 vdd gnd net@0 gnd net@33 net@2 vdd CSM__FA
+XM2 M2_A M2_B net@33 gnd M2_nCo M2_nSum vdd CSM__FA
+XNAND3@1 vdd x gnd vdd net@121 CSM__NAND2
+Xinv@0 gnd net@138 x vdd CSM__inv
+Xinv@1 gnd a net@138 vdd CSM__inv
+Xmux@1 gnd vdd gnd net@126 vdd y CSM__mux
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+
+* Spice Code nodes in cell cell 'critical_vm{sch}'
+
+.ENDS critical_vm
+
+.param vdd=0.8
+v1 vdd gnd DC {vdd}
+v2 A gnd PULSE(0 {vdd} 1000p 50p 50p 1000p 10n)
+.meas tran rise
++trig v(x) = ({vdd}/2) cross=LAST
++targ v(y) = ({vdd}/2) cross=LAST
+.meas tran fall
++trig v(x) = ({vdd}/2) cross=0
++targ v(y) = ({vdd}/2) cross=0
+
+Xcritical_vm a gnd vdd x y critical_vm
+.tran 10n
+
+.END

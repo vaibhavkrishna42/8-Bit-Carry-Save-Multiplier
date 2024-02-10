@@ -1,0 +1,114 @@
+Circuit: *** SPICE deck for cell multiplier{lay} from library CSM
+
+multiplier:_1odd1eve@1:fa@1:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@4:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@10:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@11:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@12:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@13:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@14:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@15:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@16:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@17:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@18:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@19:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@20:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@21:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@22:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@1:fa@23:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@1:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@4:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@10:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@11:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@12:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@13:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@14:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@15:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@16:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@17:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@18:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@19:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@20:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@21:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@22:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@2:fa@23:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@1:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@4:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@10:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@11:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@12:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@13:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@14:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@15:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@16:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@17:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@18:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@19:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@20:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@21:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@22:r158: both pins shorted together -- ignoring.
+multiplier:_1odd1eve@3:fa@23:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@1:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@2:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@4:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@6:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@8:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@10:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@12:r158: both pins shorted together -- ignoring.
+multiplier:oddrow@0:fa@14:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@6:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@7:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@8:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@9:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@10:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@11:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@12:r158: both pins shorted together -- ignoring.
+multiplier:ripple_v@0:fa@13:r158: both pins shorted together -- ignoring.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@3:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@5:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@6:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@7:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@8:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@9:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@10:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@2:AND2@11:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@3:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@5:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@6:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@7:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@8:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@9:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@10:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:_1ODD1EVE@3:AND2@11:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@1:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@2:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@3:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@4:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@5:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@6:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:AND2@7:A#2PIN@38_POLYSILICON-1##7 is floating.
+WARNING: Node MULTIPLIER:ODDROW@0:NAND2@0:A#2PIN@17_POLYSILICON-1##7 is floating.
+
+Per .tran options, skipping operating point for transient analysis.
+
+t=6.685e-010 FROM 5e-010 TO 1.1685e-009
+
+
+Date: Fri Dec 08 19:26:52 2023
+Total elapsed time: 22.680 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2444
+traniter = 2444
+tranpoints = 1058
+accept = 1057
+rejected = 1
+matrix size = 24170
+fillins = 30310
+solver = Normal
+Thread vector: 6224.1/3094.1[8] 1631.1/539.9[8] 896.9/540.6[8] 540.3/365.3[8]  2592/500
+Matrix Compiler1: 5.29 MB object code size  5198.6/2262.5/[1638.8]
+Matrix Compiler2: 3.04 MB object code size  1545.6/1331.7/[847.1]
+

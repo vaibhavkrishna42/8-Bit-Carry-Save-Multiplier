@@ -1,0 +1,28 @@
+.SUBCKT CSM__inv_lay gnd inp out vdd
+
+Mnmos@1 out inp#0nmos@1_poly-right gnd gnd nmos L=0.022U W=0.044U AS=0.004P AD=0.005P PS=0.242U PD=0.275U
+Mpmos@1 out inp#3pmos@1_poly-left vdd vdd pmos L=0.022U W=0.088U AS=0.006P AD=0.005P PS=0.308U PD=0.275U
+
+** Extracted Parasitic Capacitors ***
+C0 out 0 0.108fF
+
+** Extracted Parasitic Resistors ***
+R0 inp#0nmos@1_poly-right inp#0nmos@1_poly-right##0 9.455
+R1 inp#0nmos@1_poly-right##0 inp#0nmos@1_poly-right##1 9.455
+R2 inp#0nmos@1_poly-right##1 inp#0nmos@1_poly-right##2 9.455
+R3 inp#0nmos@1_poly-right##2 inp#0nmos@1_poly-right##3 9.455
+R4 inp#0nmos@1_poly-right##3 inp#0nmos@1_poly-right##4 9.455
+R5 inp#0nmos@1_poly-right##4 inp#0nmos@1_poly-right##5 9.455
+R6 inp#0nmos@1_poly-right##5 inp#0nmos@1_poly-right##6 9.455
+R7 inp#0nmos@1_poly-right##6 inp#0nmos@1_poly-right##7 9.455
+R8 inp#0nmos@1_poly-right##7 inp#0nmos@1_poly-right##8 9.455
+R9 inp#0nmos@1_poly-right##8 inp#1pin@36_polysilicon-1 9.455
+R10 inp#1pin@36_polysilicon-1 inp#2pin@28_polysilicon-1 7.75
+R11 inp#1pin@36_polysilicon-1 inp 9.3
+R12 inp#3pmos@1_poly-left inp#3pmos@1_poly-left##0 6.717
+R13 inp#3pmos@1_poly-left##0 inp#3pmos@1_poly-left##1 6.717
+R14 inp#3pmos@1_poly-left##1 inp#2pin@28_polysilicon-1 6.717
+
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+
+.ENDS CSM__inv_lay

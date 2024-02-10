@@ -1,0 +1,244 @@
+*** SPICE deck for cell multiplier{sch} from library CSM
+*** Created on Wed Oct 25, 2023 08:16:32
+*** Last revised on Fri Dec 08, 2023 16:12:52
+*** Written on Fri Dec 08, 2023 18:38:49 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.01FF
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+*** SUBCIRCUIT CSM__AND2 FROM CELL AND2{sch}
+.SUBCKT CSM__AND2 A B gnd vdd Y
+Mnmos@0 Y net@10 gnd gnd nmos L=0.022U W=0.044U
+Mnmos@1 net@10 B net@17 gnd nmos L=0.022U W=0.088U
+Mnmos@2 net@17 A gnd gnd nmos L=0.022U W=0.088U
+Mpmos@0 vdd net@10 Y vdd pmos L=0.022U W=0.088U
+Mpmos@1 vdd A net@10 vdd pmos L=0.022U W=0.088U
+Mpmos@2 vdd B net@10 vdd pmos L=0.022U W=0.088U
+
+* Spice Code nodes in cell cell 'AND2{sch}'
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.ENDS CSM__AND2
+
+*** SUBCIRCUIT CSM__FA FROM CELL FA{sch}
+.SUBCKT CSM__FA A B Ci gnd nCo nSum vdd
+Mnmos@12 net@77 A gnd gnd nmos L=0.022U W=0.264U
+Mnmos@13 net@77 B gnd gnd nmos L=0.022U W=0.264U
+Mnmos@14 nCo Ci net@77 gnd nmos L=0.022U W=0.264U
+Mnmos@15 net@84 B nCo gnd nmos L=0.022U W=0.088U
+Mnmos@16 gnd A net@84 gnd nmos L=0.022U W=0.088U
+Mnmos@17 net@93 A gnd gnd nmos L=0.022U W=0.088U
+Mnmos@18 net@93 B gnd gnd nmos L=0.022U W=0.088U
+Mnmos@19 net@93 Ci gnd gnd nmos L=0.022U W=0.088U
+Mnmos@20 nSum nCo net@93 gnd nmos L=0.022U W=0.088U
+Mnmos@21 nSum Ci net@118 gnd nmos L=0.022U W=0.132U
+Mnmos@22 net@118 B net@119 gnd nmos L=0.022U W=0.132U
+Mnmos@23 net@119 A gnd gnd nmos L=0.022U W=0.132U
+Mpmos@12 net@78 Ci nCo vdd pmos L=0.022U W=0.528U
+Mpmos@13 vdd A net@78 vdd pmos L=0.022U W=0.528U
+Mpmos@14 vdd B net@78 vdd pmos L=0.022U W=0.528U
+Mpmos@15 net@82 A vdd vdd pmos L=0.022U W=0.176U
+Mpmos@16 nCo B net@82 vdd pmos L=0.022U W=0.176U
+Mpmos@17 vdd A net@102 vdd pmos L=0.022U W=0.176U
+Mpmos@18 vdd B net@102 vdd pmos L=0.022U W=0.176U
+Mpmos@19 vdd Ci net@102 vdd pmos L=0.022U W=0.176U
+Mpmos@20 net@102 nCo nSum vdd pmos L=0.022U W=0.176U
+Mpmos@21 vdd A net@115 vdd pmos L=0.022U W=0.264U
+Mpmos@22 net@115 B net@116 vdd pmos L=0.022U W=0.264U
+Mpmos@23 net@116 Ci nSum vdd pmos L=0.022U W=0.264U
+.ENDS CSM__FA
+
+*** SUBCIRCUIT CSM__NAND2 FROM CELL NAND2{sch}
+.SUBCKT CSM__NAND2 A B gnd vdd Y
+Mnmos@1 Y A net@1 gnd nmos L=0.022U W=0.088U
+Mnmos@2 net@1 B gnd gnd nmos L=0.022U W=0.088U
+Mpmos@0 vdd B Y vdd pmos L=0.022U W=0.088U
+Mpmos@1 vdd A Y vdd pmos L=0.022U W=0.088U
+
+* Spice Code nodes in cell cell 'NAND2{sch}'
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.ENDS CSM__NAND2
+
+*** SUBCIRCUIT CSM__inv FROM CELL inv{sch}
+.SUBCKT CSM__inv gnd inp out vdd
+Mnmos@0 out inp gnd gnd nmos L=0.022U W=0.044U
+Mpmos@0 vdd inp out vdd pmos L=0.022U W=0.088U
+
+* Spice Code nodes in cell cell 'inv{sch}'
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.ENDS CSM__inv
+
+*** SUBCIRCUIT multiplier FROM CELL multiplier{sch}
+.SUBCKT multiplier A0 A1 A2 A3 A4 A5 A6 A7 B0 B1 B2 B3 B4 B5 B6 B7 gnd M0 M1 M10 M11 M12 M13 M14 M15 M2 M3 M4 M5 M6 M7 M8 M9 nCo vdd
+XAND2@0 A7 B1 gnd vdd net@997 CSM__AND2
+XAND2@1 A6 B2 gnd vdd net@1096 CSM__AND2
+XAND2@2 A5 B2 gnd vdd net@1109 CSM__AND2
+XAND2@3 A4 B2 gnd vdd net@1116 CSM__AND2
+XAND2@4 A3 B2 gnd vdd net@1118 CSM__AND2
+XAND2@5 A2 B2 gnd vdd net@1120 CSM__AND2
+XAND2@6 A1 B2 gnd vdd net@1122 CSM__AND2
+XAND2@7 A0 B2 gnd vdd net@1131 CSM__AND2
+XAND2@8 A6 B4 gnd vdd net@1173 CSM__AND2
+XAND2@9 A5 B4 gnd vdd net@1176 CSM__AND2
+XAND2@10 A4 B4 gnd vdd net@1180 CSM__AND2
+XAND2@11 A3 B4 gnd vdd net@1184 CSM__AND2
+XAND2@12 A2 B4 gnd vdd net@1189 CSM__AND2
+XAND2@13 A1 B4 gnd vdd net@1190 CSM__AND2
+XAND2@14 A0 B4 gnd vdd net@1193 CSM__AND2
+XAND2@15 A6 B6 gnd vdd net@1246 CSM__AND2
+XAND2@16 A5 B6 gnd vdd net@1247 CSM__AND2
+XAND2@17 A4 B6 gnd vdd net@1248 CSM__AND2
+XAND2@18 A3 B6 gnd vdd net@1253 CSM__AND2
+XAND2@19 A2 B6 gnd vdd net@1254 CSM__AND2
+XAND2@20 A1 B6 gnd vdd net@1257 CSM__AND2
+XAND2@21 A0 B6 gnd vdd net@1261 CSM__AND2
+XAND2@22 A6 B7 gnd vdd net@879 CSM__AND2
+XAND2@23 A5 B7 gnd vdd net@885 CSM__AND2
+XAND2@24 A4 B7 gnd vdd net@887 CSM__AND2
+XAND2@25 A3 B7 gnd vdd net@893 CSM__AND2
+XAND2@26 A2 B7 gnd vdd net@1268 CSM__AND2
+XAND2@27 A1 B7 gnd vdd net@900 CSM__AND2
+XAND2@28 A0 B7 gnd vdd net@1264 CSM__AND2
+XAND2@29 A7 B3 gnd vdd net@812 CSM__AND2
+XAND2@30 A7 B5 gnd vdd net@1290 CSM__AND2
+XAND2@31 A7 B0 gnd vdd net@1001 CSM__AND2
+XAND2@32 A0 B0 gnd vdd M0 CSM__AND2
+XFA_1_1 net@997 gnd vdd gnd net@72 net@248 vdd CSM__FA
+XFA_1_2 net@655 vdd net@1001 gnd net@69 net@246 vdd CSM__FA
+XFA_1_3 net@657 vdd net@658 gnd net@66 net@244 vdd CSM__FA
+XFA_1_4 net@659 vdd net@660 gnd net@63 net@242 vdd CSM__FA
+XFA_1_5 net@661 vdd net@662 gnd net@60 net@240 vdd CSM__FA
+XFA_1_6 net@663 vdd net@664 gnd net@57 net@238 vdd CSM__FA
+XFA_1_7 net@665 vdd net@666 gnd net@54 net@236 vdd CSM__FA
+XFA_1_8 net@667 vdd net@722 gnd net@52 M1 vdd CSM__FA
+XFA_2_1 net@785 net@72 gnd gnd net@139 net@276 vdd CSM__FA
+XFA_2_2 net@1096 net@69 net@248 gnd net@136 net@274 vdd CSM__FA
+XFA_2_3 net@1109 net@66 net@246 gnd net@133 net@272 vdd CSM__FA
+XFA_2_4 net@1116 net@63 net@244 gnd net@130 net@270 vdd CSM__FA
+XFA_2_5 net@1118 net@60 net@242 gnd net@124 net@256 vdd CSM__FA
+XFA_2_6 net@1120 net@57 net@240 gnd net@127 net@841 vdd CSM__FA
+XFA_2_7 net@1122 net@54 net@238 gnd net@121 net@873 vdd CSM__FA
+XFA_2_8 net@1131 net@52 net@236 gnd net@142 net@947 vdd CSM__FA
+XFA_3_1 net@812 net@139 vdd gnd net@118 net@278 vdd CSM__FA
+XFA_3_2 net@575 net@136 net@276 gnd net@115 net@280 vdd CSM__FA
+XFA_3_3 net@572 net@133 net@274 gnd net@112 net@290 vdd CSM__FA
+XFA_3_4 net@574 net@130 net@272 gnd net@109 net@288 vdd CSM__FA
+XFA_3_5 net@571 net@124 net@270 gnd net@106 net@268 vdd CSM__FA
+XFA_3_6 net@573 net@127 net@256 gnd net@103 net@258 vdd CSM__FA
+XFA_3_7 net@577 net@121 net@841 gnd net@100 net@254 vdd CSM__FA
+XFA_3_8 net@576 net@142 net@873 gnd net@98 M3 vdd CSM__FA
+XFA_4_1 net@648 net@118 gnd gnd net@231 net@304 vdd CSM__FA
+XFA_4_2 net@1173 net@115 net@278 gnd net@228 net@306 vdd CSM__FA
+XFA_4_3 net@1176 net@112 net@280 gnd net@225 net@308 vdd CSM__FA
+XFA_4_4 net@1180 net@109 net@290 gnd net@222 net@286 vdd CSM__FA
+XFA_4_5 net@1184 net@106 net@288 gnd net@219 net@284 vdd CSM__FA
+XFA_4_6 net@1189 net@103 net@268 gnd net@216 net@264 vdd CSM__FA
+XFA_4_7 net@1190 net@100 net@258 gnd net@213 net@260 vdd CSM__FA
+XFA_4_8 net@1193 net@98 net@254 gnd net@234 net@948 vdd CSM__FA
+XFA_5_1 net@1290 net@231 vdd gnd net@175 net@310 vdd CSM__FA
+XFA_5_2 net@596 net@228 net@304 gnd net@172 net@302 vdd CSM__FA
+XFA_5_3 net@593 net@225 net@306 gnd net@169 net@300 vdd CSM__FA
+XFA_5_4 net@595 net@222 net@308 gnd net@166 net@298 vdd CSM__FA
+XFA_5_5 net@592 net@219 net@286 gnd net@163 net@296 vdd CSM__FA
+XFA_5_6 net@594 net@216 net@284 gnd net@160 net@292 vdd CSM__FA
+XFA_5_7 net@598 net@213 net@264 gnd net@157 net@266 vdd CSM__FA
+XFA_5_8 net@597 net@234 net@260 gnd net@155 M5 vdd CSM__FA
+XFA_6_1 net@644 net@175 gnd gnd net@150 net@312 vdd CSM__FA
+XFA_6_2 net@1246 net@172 net@310 gnd net@147 net@314 vdd CSM__FA
+XFA_6_3 net@1247 net@169 net@302 gnd net@144 net@316 vdd CSM__FA
+XFA_6_4 net@1248 net@166 net@300 gnd net@210 net@318 vdd CSM__FA
+XFA_6_5 net@1253 net@163 net@298 gnd net@204 net@320 vdd CSM__FA
+XFA_6_6 net@1254 net@160 net@296 gnd net@207 net@322 vdd CSM__FA
+XFA_6_7 net@1257 net@157 net@292 gnd net@201 net@294 vdd CSM__FA
+XFA_6_8 net@1261 net@155 net@266 gnd net@153 net@957 vdd CSM__FA
+XFA_7_1 net@935 net@150 vdd gnd net@939 net@1061 vdd CSM__FA
+XFA_7_2 net@879 net@147 net@312 gnd net@197 net@914 vdd CSM__FA
+XFA_7_3 net@885 net@144 net@314 gnd net@194 net@1069 vdd CSM__FA
+XFA_7_4 net@887 net@210 net@316 gnd net@191 net@911 vdd CSM__FA
+XFA_7_5 net@893 net@204 net@318 gnd net@908 net@1081 vdd CSM__FA
+XFA_7_6 net@1268 net@207 net@320 gnd net@185 net@906 vdd CSM__FA
+XFA_7_7 net@900 net@201 net@322 gnd net@905 net@1305 vdd CSM__FA
+XFA_7_8 net@1264 net@153 net@294 gnd net@1019 M7 vdd CSM__FA
+XFA_8_1 gnd net@198 net@1043 gnd nCo M15 vdd CSM__FA
+XFA_8_2 net@1061 net@197 net@1059 gnd net@1043 net@964 vdd CSM__FA
+XFA_8_3 net@1065 net@1067 net@1057 gnd net@1059 M13 vdd CSM__FA
+XFA_8_4 net@1069 net@191 net@1055 gnd net@1057 net@966 vdd CSM__FA
+XFA_8_5 net@1071 net@1075 net@1053 gnd net@1055 M11 vdd CSM__FA
+XFA_8_6 net@1081 net@185 net@1051 gnd net@1053 net@967 vdd CSM__FA
+XFA_8_7 net@733 net@1022 net@1049 gnd net@1051 M9 vdd CSM__FA
+XFA_8_8 net@1305 net@1019 gnd gnd net@1049 net@969 vdd CSM__FA
+XNAND2@19 A7 B2 gnd vdd net@785 CSM__NAND2
+XNAND2@35 A7 B4 gnd vdd net@648 CSM__NAND2
+XNAND2@43 A7 B6 gnd vdd net@644 CSM__NAND2
+XNAND2@68 A6 B3 gnd vdd net@575 CSM__NAND2
+XNAND2@69 A5 B3 gnd vdd net@572 CSM__NAND2
+XNAND2@70 A4 B3 gnd vdd net@574 CSM__NAND2
+XNAND2@71 A3 B3 gnd vdd net@571 CSM__NAND2
+XNAND2@72 A2 B3 gnd vdd net@573 CSM__NAND2
+XNAND2@73 A1 B3 gnd vdd net@577 CSM__NAND2
+XNAND2@74 A0 B3 gnd vdd net@576 CSM__NAND2
+XNAND2@76 A6 B5 gnd vdd net@596 CSM__NAND2
+XNAND2@77 A5 B5 gnd vdd net@593 CSM__NAND2
+XNAND2@78 A4 B5 gnd vdd net@595 CSM__NAND2
+XNAND2@79 A3 B5 gnd vdd net@592 CSM__NAND2
+XNAND2@80 A2 B5 gnd vdd net@594 CSM__NAND2
+XNAND2@81 A1 B5 gnd vdd net@598 CSM__NAND2
+XNAND2@82 A0 B5 gnd vdd net@597 CSM__NAND2
+XNAND2@83 A7 B7 gnd vdd net@935 CSM__NAND2
+XNAND2@93 A6 B1 gnd vdd net@655 CSM__NAND2
+XNAND2@95 A5 B1 gnd vdd net@657 CSM__NAND2
+XNAND2@96 A6 B0 gnd vdd net@658 CSM__NAND2
+XNAND2@97 A4 B1 gnd vdd net@659 CSM__NAND2
+XNAND2@98 A5 B0 gnd vdd net@660 CSM__NAND2
+XNAND2@99 A3 B1 gnd vdd net@661 CSM__NAND2
+XNAND2@100 A4 B0 gnd vdd net@662 CSM__NAND2
+XNAND2@101 A2 B1 gnd vdd net@663 CSM__NAND2
+XNAND2@102 A3 B0 gnd vdd net@664 CSM__NAND2
+XNAND2@103 A1 B1 gnd vdd net@665 CSM__NAND2
+XNAND2@104 A2 B0 gnd vdd net@666 CSM__NAND2
+XNAND2@105 A0 B1 gnd vdd net@667 CSM__NAND2
+XNAND2@106 A1 B0 gnd vdd net@722 CSM__NAND2
+Xinv@52 gnd net@906 net@733 vdd CSM__inv
+Xinv@53 gnd net@905 net@1022 vdd CSM__inv
+Xinv@54 gnd net@911 net@1071 vdd CSM__inv
+Xinv@55 gnd net@908 net@1075 vdd CSM__inv
+Xinv@56 gnd net@914 net@1065 vdd CSM__inv
+Xinv@57 gnd net@194 net@1067 vdd CSM__inv
+Xinv@61 gnd net@939 net@198 vdd CSM__inv
+Xinv@64 gnd net@947 M2 vdd CSM__inv
+Xinv@65 gnd net@948 M4 vdd CSM__inv
+Xinv@66 gnd net@957 M6 vdd CSM__inv
+Xinv@67 gnd net@969 M8 vdd CSM__inv
+Xinv@68 gnd net@967 M10 vdd CSM__inv
+Xinv@69 gnd net@966 M12 vdd CSM__inv
+Xinv@70 gnd net@964 M14 vdd CSM__inv
+
+* Spice Code nodes in cell cell 'multiplier{sch}'
+
+
+.ENDS multiplier
+
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.param vdd=0.8
+v1 vdd gnd DC {vdd}
+v10 B0 gnd DC {vdd}
+v11 B1 gnd DC {vdd}
+v12 B2 gnd DC 0
+v13 B3 gnd DC 0
+v14 B4 gnd DC 0
+v15 B5 gnd DC 0
+v16 B6 gnd DC 0
+v17 B7 gnd DC 0
+v2 A0 gnd DC 0
+v3 A1 gnd DC 0
+v4 A2 gnd DC 0
+v5 A3 gnd DC 0
+v6 A4 gnd DC 0
+v7 A5 gnd DC 0
+v8 A6 gnd DC 0
+v9 A7 gnd PWL(0 {vdd} 450p {vdd} 550p 0 1n 0)
+.meas tran t
++trig V(a7)=0.4 cross=last
++targ V(m15)=0.4 cross=LAST
+.tran 4n uic
+Xmultiplier A0 A1 A2 A3 A4 A5 A6 A7 B0 B1 B2 B3 B4 B5 B6 B7 gnd M0 M1 M10 M11 M12 M13 M14 M15 M2 M3 M4 M5 M6 M7 M8 M9 nCo vdd multiplier
+
+.END

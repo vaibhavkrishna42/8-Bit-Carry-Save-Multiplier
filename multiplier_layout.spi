@@ -1,0 +1,144 @@
+*** SPICE deck for cell multiplier{lay} from library CSM
+*** Created on Thu Dec 07, 2023 13:05:37
+*** Last revised on Fri Dec 08, 2023 18:34:47
+*** Written on Fri Dec 08, 2023 18:35:32 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.01FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+* cell '1odd1even{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__1odd1even.spi
+
+* cell 'AND2{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__AND2.spi
+
+* cell 'NAND2{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__NAND2.spi
+
+* cell 'OddRow{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__OddRow.spi
+
+* cell 'ripple_vector_addition{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__ripple_vector_addition.spi
+
+* cell 'inv_lay{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__inv_lay.spi
+
+* cell 'FA{lay}' is described in this file:
+.include D:\Reading\EE5311\Latest\Models\CSM__FA.spi
+
+*** SUBCIRCUIT multiplier FROM CELL multiplier{lay}
+.SUBCKT multiplier A0 A1 A2 A3 A4 A5 A6 A7 B0 B1 B2 B3 B4 B5 B6 B7 gnd M0 M1 M10 M11 M12 M13 M14 M15 M2 M3 M4 M5 M6 M7 M8 M9 nCo vdd
+X_1odd1eve@1 A0 A1 A2 A3 A4 A5 A6 A7 B2 B1 vdd vdd vdd vdd vdd vdd vdd gnd net@88 net@79 net@70 net@61 net@54 net@43 net@34 net@25 gnd net@82 net@73 net@62 net@55 net@48 net@37 net@28 net@382 net@374 net@366 net@358 net@350 net@342 net@335 vdd M2 M1 CSM__1odd1even
+X_1odd1eve@2 A0#41odd1eve@1_A0_1 A1#01odd1eve@1_A1_1 A2#01odd1eve@1_A2_1 A3#41odd1eve@2_A3 A4#01odd1eve@1_A4_1 A5#01odd1eve@1_A5_1 A6#01odd1eve@1_A6_1 A7#01odd1eve@1_A7_1 B4 B3 net@88 net@79 net@70 net@61 net@54 net@43 net@34 net@25 net@89 net@80 net@71 net@63 net@53 net@44 net@35 net@26 gnd net@83 net@74 net@64 net@56 net@47 net@38 net@29 net@82 net@73 net@62 net@55 net@48 net@37 net@28 vdd M4 M3 CSM__1odd1even
+X_1odd1eve@3 A0#21odd1eve@2_A0_1 A1#21odd1eve@2_A1_1 A2#21odd1eve@2_A2_1 A3#21odd1eve@3_A3 A4#21odd1eve@2_A4_1 A5#21odd1eve@2_A5_1 A6#21odd1eve@2_A6_1 A7#21odd1eve@2_A7_1 B6 B5 net@89 net@80 net@71 net@63 net@53 net@44 net@35 net@26 net@90 net@81 net@72 net@65 net@52 net@45 net@36 net@27 gnd net@84 net@75 net@66 net@57 net@46 net@39 net@30 net@83 net@74 net@64 net@56 net@47 net@38 net@29 vdd M6 M5 CSM__1odd1even
+XAND2@0 A7#6contact@40_metal-3-metal-4 B0#0contact@13_metal-3-metal-4 gnd vdd net@335 CSM__AND2
+XAND2@1 A0#7contact@69_metal-3-metal-4 B0#28contact@34_metal-3-metal-4 gnd vdd M0 CSM__AND2
+XNAND2@0 A6#7contact@45_metal-3-metal-4 B0#4contact@16_metal-3-metal-4 gnd vdd net@342 CSM__NAND2
+XNAND2@1 A5#7contact@49_metal-3-metal-4 B0#8contact@19_metal-3-metal-4 gnd vdd net@350 CSM__NAND2
+XNAND2@2 A4#7contact@53_metal-3-metal-4 B0#12contact@22_metal-3-metal-4 gnd vdd net@358 CSM__NAND2
+XNAND2@3 A3#7contact@57_metal-3-metal-4 B0#16contact@25_metal-3-metal-4 gnd vdd net@366 CSM__NAND2
+XNAND2@4 A2#7contact@61_metal-3-metal-4 B0#20contact@28_metal-3-metal-4 gnd vdd net@374 CSM__NAND2
+XNAND2@5 A1#7contact@65_metal-3-metal-4 B0#24contact@31_metal-3-metal-4 gnd vdd net@382 CSM__NAND2
+XOddRow@0 A0#01odd1eve@3_A0_1 A1#5OddRow@0_A1 A2#5OddRow@0_A2 A3#01odd1eve@3_A3_1 A4#5OddRow@0_A4 A5#5OddRow@0_A5 A6#5OddRow@0_A6 A7#5OddRow@0_A7 B7 net@90 net@81 net@72 net@65 net@52 net@45 net@36 net@27 net@153 net@151 net@149 net@147 net@145 net@143 net@141 net@139 gnd net@152 net@150 net@148 net@146 net@144 net@142 net@140 net@84 net@75 net@66 net@57 net@46 net@39 net@30 vdd M7 CSM__OddRow
+Xripple_v@0 net@153 net@151 net@149 net@147 net@145 net@143 net@141 net@139 nCo gnd net@152 net@150 net@148 net@146 net@144 net@142 net@140 vdd M10 M11 M12 M13 M14 M15 M8 M9 CSM__ripple_vector_addition
+** Extracted Parasitic Capacitors ***
+C0 A0 0 0.327fF
+C1 A1 0 0.33fF
+C2 A2 0 0.33fF
+C3 A3 0 0.33fF
+C4 A4 0 0.33fF
+C5 A5 0 0.33fF
+C6 A6 0 0.328fF
+C7 A7 0 0.327fF
+C8 net@382 0 0.074fF
+C9 net@374 0 0.074fF
+C10 net@366 0 0.074fF
+C11 net@358 0 0.074fF
+C12 net@350 0 0.074fF
+C13 net@342 0 0.078fF
+C14 net@335 0 0.071fF
+C15 A7#6contact@40_metal-3-metal-4 0 0.197fF
+C16 B0#0contact@13_metal-3-metal-4 0 0.455fF
+C17 A0#7contact@69_metal-3-metal-4 0 0.198fF
+C18 B0#28contact@34_metal-3-metal-4 0 0.234fF
+C19 M0 0 0.036fF
+C20 A6#7contact@45_metal-3-metal-4 0 0.198fF
+C21 B0#4contact@16_metal-3-metal-4 0 0.472fF
+C22 A5#7contact@49_metal-3-metal-4 0 0.201fF
+C23 B0#8contact@19_metal-3-metal-4 0 0.474fF
+C24 A4#7contact@53_metal-3-metal-4 0 0.201fF
+C25 B0#12contact@22_metal-3-metal-4 0 0.473fF
+C26 A3#7contact@57_metal-3-metal-4 0 0.201fF
+C27 B0#16contact@25_metal-3-metal-4 0 0.473fF
+C28 A2#7contact@61_metal-3-metal-4 0 0.201fF
+C29 B0#20contact@28_metal-3-metal-4 0 0.473fF
+C30 A1#7contact@65_metal-3-metal-4 0 0.203fF
+C31 B0#24contact@31_metal-3-metal-4 0 0.47fF
+C32 B0 0 0.221fF
+** Extracted Parasitic Resistors ***
+R0 B0#0contact@13_metal-3-metal-4 B0 5.278
+R1 B0#0contact@13_metal-3-metal-4 B0#4contact@16_metal-3-metal-4 5.551
+R2 B0#4contact@16_metal-3-metal-4 B0#8contact@19_metal-3-metal-4 5.681
+R3 B0#8contact@19_metal-3-metal-4 B0#12contact@22_metal-3-metal-4 5.642
+R4 B0#12contact@22_metal-3-metal-4 B0#16contact@25_metal-3-metal-4 5.642
+R5 B0#16contact@25_metal-3-metal-4 B0#20contact@28_metal-3-metal-4 5.642
+R6 B0#20contact@28_metal-3-metal-4 B0#24contact@31_metal-3-metal-4 5.642
+R7 B0#24contact@31_metal-3-metal-4 B0#28contact@34_metal-3-metal-4 5.577
+R8 A7 A7#6contact@40_metal-3-metal-4 4.693
+R9 A6 A6#7contact@45_metal-3-metal-4 4.719
+R10 A5 A5#7contact@49_metal-3-metal-4 4.771
+R11 A4 A4#7contact@53_metal-3-metal-4 4.771
+R12 A3 A3#7contact@57_metal-3-metal-4 4.771
+R13 A2 A2#7contact@61_metal-3-metal-4 4.771
+R14 A1 A1#7contact@65_metal-3-metal-4 4.771
+R15 A0 A0#7contact@69_metal-3-metal-4 4.706
+
+* Spice Code nodes in cell cell 'multiplier{lay}'
+
+.ENDS multiplier
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+.param vdd=0.8
+v1 vdd gnd DC {vdd}
+v10 B0 gnd DC {vdd}
+v11 B1 gnd DC {vdd}
+v12 B2 gnd DC 0
+v13 B3 gnd DC 0
+v14 B4 gnd DC 0
+v15 B5 gnd DC 0
+v16 B6 gnd DC 0
+v17 B7 gnd DC 0
+v2 A0 gnd DC 0
+v3 A1 gnd DC 0
+v4 A2 gnd DC 0
+v5 A3 gnd DC 0
+v6 A4 gnd DC 0
+v7 A5 gnd DC 0
+v8 A6 gnd DC 0
+v9 A7 gnd PWL(0 {vdd} 450p {vdd} 550p 0 1n 0)
+.meas tran t
++trig V(a7)=0.4 cross=last
++targ V(m15)=0.4 cross=LAST
+.tran 4n uic
+
+Xmultiplier A0 A1 A2 A3 A4 A5 A6 A7 B0 B1 B2 B3 B4 B5 B6 B7 gnd M0 M1 M10 M11 M12 M13 M14 M15 M2 M3 M4 M5 M6 M7 M8 M9 nCo vdd multiplier
+
+.END

@@ -1,0 +1,132 @@
+.SUBCKT CSM__1odd1even A0 A1 A2 A3 A4 A5 A6 A7 Beven Bodd Cin0 Cin1 Cin2 Cin3 Cin4 Cin5 Cin6 Cin7 Co0 Co1 Co2 Co3 Co4 Co5 Co6 Co7 gnd S0 S1 S2 S3 S4 S5 S6 Sin0 Sin1 Sin2 Sin3 Sin4 Sin5 Sin6 vdd Zeven Zodd
+
+XAND2@3 A7 Bodd gnd vdd net@654 CSM__AND2
+XAND2@5 A6 Beven#4contact@406_metal-3-metal-4 gnd vdd net@889 CSM__AND2
+XAND2@6 A5 Beven#9contact@451_metal-3-metal-4 gnd vdd net@954 CSM__AND2
+XAND2@7 A4 Beven#14contact@496_metal-3-metal-4 gnd vdd net@1019 CSM__AND2
+XAND2@8 A3 Beven#19contact@541_metal-3-metal-4 gnd vdd net@1084 CSM__AND2
+XAND2@9 A2 Beven#24contact@586_metal-3-metal-4 gnd vdd net@1149 CSM__AND2
+XAND2@10 A1 Beven#29contact@631_metal-3-metal-4 gnd vdd net@1214 CSM__AND2
+XAND2@11 A0 Beven#34contact@676_metal-3-metal-4 gnd vdd net@1279 CSM__AND2
+
+XFA@1 net@590 net@347 gnd gnd Co7 S6 vdd CSM__FA
+XFA@4 net@654 Cin7 vdd gnd net@347 net@643 vdd CSM__FA
+XFA@10 net@890 Cin6 Sin6 gnd net@859 net@871 vdd CSM__FA
+XFA@11 net@889 net@859 net@643 gnd Co6 S5 vdd CSM__FA
+XFA@12 net@955 Cin5 Sin5 gnd net@924 net@936 vdd CSM__FA
+XFA@13 net@954 net@924 net@871 gnd Co5 S4 vdd CSM__FA
+XFA@14 net@1020 Cin4 Sin4 gnd net@989 net@1001 vdd CSM__FA
+XFA@15 net@1019 net@989 net@936 gnd Co4 S3 vdd CSM__FA
+XFA@16 net@1085 Cin3 Sin3 gnd net@1054 net@1066 vdd CSM__FA
+XFA@17 net@1084 net@1054 net@1001 gnd Co3 S2 vdd CSM__FA
+XFA@18 net@1150 Cin2 Sin2 gnd net@1119 net@1131 vdd CSM__FA
+XFA@19 net@1149 net@1119 net@1066 gnd Co2 S1 vdd CSM__FA
+XFA@20 net@1215 Cin1 Sin1 gnd net@1184 net@1196 vdd CSM__FA
+XFA@21 net@1214 net@1184 net@1131 gnd Co1 S0 vdd CSM__FA
+XFA@22 net@1280 Cin0 Sin0 gnd net@1249 Zodd vdd CSM__FA
+XFA@23 net@1279 net@1249 net@1196 gnd Co0 net@1238 vdd CSM__FA
+
+XNAND2@0 A7 Beven gnd vdd net@590 CSM__NAND2
+XNAND2@3 A6 Bodd#4contact@385_metal-3-metal-4 gnd vdd net@890 CSM__NAND2
+XNAND2@4 A5 Bodd#9contact@430_metal-3-metal-4 gnd vdd net@955 CSM__NAND2
+XNAND2@5 A4 Bodd#14contact@475_metal-3-metal-4 gnd vdd net@1020 CSM__NAND2
+XNAND2@6 A3 Bodd#19contact@520_metal-3-metal-4 gnd vdd net@1085 CSM__NAND2
+XNAND2@7 A2 Bodd#24contact@565_metal-3-metal-4 gnd vdd net@1150 CSM__NAND2
+XNAND2@8 A1 Bodd#29contact@610_metal-3-metal-4 gnd vdd net@1215 CSM__NAND2
+XNAND2@9 A0 Bodd#34contact@655_metal-3-metal-4 gnd vdd net@1280 CSM__NAND2
+
+Xinv_lay@0 gnd net@1238 Zeven vdd CSM__inv_lay
+
+** Extracted Parasitic Capacitors ***
+C0 A7 0 0.287fF
+C1 Bodd 0 0.257fF
+C2 A6 0 0.276fF
+C3 Beven#4contact@406_metal-3-metal-4 0 0.493fF
+C4 A5 0 0.276fF
+C5 Beven#9contact@451_metal-3-metal-4 0 0.49fF
+C6 A4 0 0.276fF
+C7 Beven#14contact@496_metal-3-metal-4 0 0.49fF
+C8 A3 0 0.276fF
+C9 Beven#19contact@541_metal-3-metal-4 0 0.49fF
+C10 A2 0 0.276fF
+C11 Beven#24contact@586_metal-3-metal-4 0 0.49fF
+C12 A1 0 0.276fF
+C13 Beven#29contact@631_metal-3-metal-4 0 0.49fF
+C14 A0 0 0.276fF
+C15 Beven#34contact@676_metal-3-metal-4 0 0.254fF
+C16 net@347 0 0.461fF
+C17 Co7 0 0.042fF
+C18 S6 0 0.042fF
+C19 Cin7 0 0.379fF
+C20 net@643 0 0.186fF
+C21 Cin6 0 0.379fF
+C22 Sin6 0 0.162fF
+C23 net@859 0 0.461fF
+C24 net@871 0 0.186fF
+C25 Co6 0 0.042fF
+C26 S5 0 0.042fF
+C27 Cin5 0 0.379fF
+C28 Sin5 0 0.162fF
+C29 net@924 0 0.461fF
+C30 net@936 0 0.186fF
+C31 Co5 0 0.042fF
+C32 S4 0 0.042fF
+C33 Cin4 0 0.379fF
+C34 Sin4 0 0.162fF
+C35 net@989 0 0.461fF
+C36 net@1001 0 0.186fF
+C37 Co4 0 0.042fF
+C38 S3 0 0.042fF
+C39 Cin3 0 0.379fF
+C40 Sin3 0 0.162fF
+C41 net@1054 0 0.461fF
+C42 net@1066 0 0.186fF
+C43 Co3 0 0.042fF
+C44 S2 0 0.042fF
+C45 Cin2 0 0.379fF
+C46 Sin2 0 0.162fF
+C47 net@1119 0 0.461fF
+C48 net@1131 0 0.186fF
+C49 Co2 0 0.042fF
+C50 S1 0 0.042fF
+C51 Cin1 0 0.379fF
+C52 Sin1 0 0.162fF
+C53 net@1184 0 0.461fF
+C54 net@1196 0 0.186fF
+C55 Co1 0 0.042fF
+C56 S0 0 0.042fF
+C57 Cin0 0 0.379fF
+C58 Sin0 0 0.162fF
+C59 net@1249 0 0.461fF
+C60 Zodd 0 0.067fF
+C61 Co0 0 0.042fF
+C62 net@1238 0 0.028fF
+C63 Beven 0 0.288fF
+C64 Bodd#4contact@385_metal-3-metal-4 0 0.488fF
+C65 Bodd#9contact@430_metal-3-metal-4 0 0.492fF
+C66 Bodd#14contact@475_metal-3-metal-4 0 0.492fF
+C67 Bodd#19contact@520_metal-3-metal-4 0 0.492fF
+C68 Bodd#24contact@565_metal-3-metal-4 0 0.492fF
+C69 Bodd#29contact@610_metal-3-metal-4 0 0.492fF
+C70 Bodd#34contact@655_metal-3-metal-4 0 0.256fF
+C71 Zeven 0 0.022fF
+
+** Extracted Parasitic Resistors ***
+R0 Bodd Bodd#4contact@385_metal-3-metal-4 5.551
+R1 Bodd#4contact@385_metal-3-metal-4 Bodd#9contact@430_metal-3-metal-4 5.642
+R2 Bodd#9contact@430_metal-3-metal-4 Bodd#14contact@475_metal-3-metal-4 5.642
+R3 Bodd#14contact@475_metal-3-metal-4 Bodd#19contact@520_metal-3-metal-4 5.642
+R4 Bodd#19contact@520_metal-3-metal-4 Bodd#24contact@565_metal-3-metal-4 5.642
+R5 Bodd#24contact@565_metal-3-metal-4 Bodd#29contact@610_metal-3-metal-4 5.642
+R6 Bodd#29contact@610_metal-3-metal-4 Bodd#34contact@655_metal-3-metal-4 5.642
+R7 Beven Beven#4contact@406_metal-3-metal-4 5.72
+R8 Beven#4contact@406_metal-3-metal-4 Beven#9contact@451_metal-3-metal-4 5.642
+R9 Beven#9contact@451_metal-3-metal-4 Beven#14contact@496_metal-3-metal-4 5.642
+R10 Beven#14contact@496_metal-3-metal-4 Beven#19contact@541_metal-3-metal-4 5.642
+R11 Beven#19contact@541_metal-3-metal-4 Beven#24contact@586_metal-3-metal-4 5.642
+R12 Beven#24contact@586_metal-3-metal-4 Beven#29contact@631_metal-3-metal-4 5.642
+R13 Beven#29contact@631_metal-3-metal-4 Beven#34contact@676_metal-3-metal-4 5.642
+
+.include "D:\Reading\EE5311\Latest\22nm_HP.pm"
+
+.ENDS CSM__1odd1even

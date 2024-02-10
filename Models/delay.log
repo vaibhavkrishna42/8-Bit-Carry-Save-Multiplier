@@ -1,0 +1,6 @@
+Stray ".ends" card: .ends fulladder
+Circuit: .SUBCKT FullAdder A B Ci Co* gnd S* vdd
+
+Error on line 39 : fulladder@0 a b ci co* gnd s* vdd fulladder
+	 Unknown parameter "co*"
+Fatal Error: Fulladder@0: Missing gain value
